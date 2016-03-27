@@ -1,0 +1,23 @@
+c:\users\nikolas\documents\visual studio 2015\Projects\Personal Manager\Personal Manager\bin\Debug\Personal Manager.exe.config
+C:\Users\Nikolas\documents\visual studio 2015\Projects\Personal Manager\Personal Manager\bin\Debug\Personal Manager.exe
+C:\Users\Nikolas\documents\visual studio 2015\Projects\Personal Manager\Personal Manager\bin\Debug\Personal Manager.pdb
+C:\Users\Nikolas\documents\visual studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal Manager.csprojResolveAssemblyReference.cache
+C:\Users\Nikolas\documents\visual studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal_Manager.Form1.resources
+C:\Users\Nikolas\documents\visual studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal_Manager.Form2.resources
+C:\Users\Nikolas\documents\visual studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal_Manager.Properties.Resources.resources
+C:\Users\Nikolas\documents\visual studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal Manager.csproj.GenerateResource.Cache
+C:\Users\Nikolas\documents\visual studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal Manager.exe
+C:\Users\Nikolas\documents\visual studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal Manager.pdb
+C:\Users\Nikolas\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal_Manager.Form3.resources
+C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\bin\Debug\Personal Manager.exe.config
+C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal Manager.exe
+C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal Manager.pdb
+C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\bin\Debug\Personal Manager.exe
+C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\bin\Debug\Personal Manager.pdb
+C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal Manager.csprojResolveAssemblyReference.cache
+C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal_Manager.Form1.resources
+C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal_Manager.Form2.resources
+C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal_Manager.Form3.resources
+C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal_Manager.Properties.Resources.resources
+C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal Manager.csproj.GenerateResource.Cache
+C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal_Manager.Form4.resources
