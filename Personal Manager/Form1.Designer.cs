@@ -1,5 +1,6 @@
 ﻿namespace Personal_Manager
 {
+     ///this is the form design, not the associated actions
     partial class Form1
     {
         /// <summary>
