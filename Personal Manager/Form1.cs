@@ -273,13 +273,24 @@ namespace Personal_Manager
             string[] dirs = Directory.GetDirectories(@"C:\CanterlotApplications\PersonalManager\");
             try
             {
+                List<string> AcceptedDIRs = new List<string>();//Accepted DIRs are the ones that have both first names and lastnames
+                List<string> FailedDIRs = new List<string>();
+                foreach (string dir in dirs)
+                {
+                    if (dir.Contains(" ")) AcceptedDIRs.Add(dir);
+                    else FailedDIRs.Add(dir);
+                }
                 //in last-name alphabetical ordering
-                foreach (string dir in dirs.OrderBy(p => p.Split(' ')[1]))
+                foreach (string dir in AcceptedDIRs.OrderBy(p => p.Split(' ')[1]))
+                {
+                    listBox1.Items.Add(Path.GetFileName(dir));
+                }
+                foreach(string dir in FailedDIRs)
                 {
                     listBox1.Items.Add(Path.GetFileName(dir));
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 //shows the error box
                 Form4 olah = new Form4();
