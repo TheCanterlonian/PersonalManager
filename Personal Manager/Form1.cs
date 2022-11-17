@@ -66,6 +66,7 @@ namespace Personal_Manager
             Directory.CreateDirectory(@"C:\CanterlotApplications\PersonalManager\" + newFolderName + @"\files");
             var newFirst = File.Create(@"C:\CanterlotApplications\PersonalManager\" + newFolderName + @"\first.txt");
             newFirst.Close();
+            File.WriteAllText(@"C:\CanterlotApplications\PersonalManager\" + newFolderName + @"\first.txt", newFolderName);
             var newLast = File.Create(@"C:\CanterlotApplications\PersonalManager\" + newFolderName + @"\last.txt");
             newLast.Close();
             var newBio = File.Create(@"C:\CanterlotApplications\PersonalManager\" + newFolderName + @"\bio.txt");
