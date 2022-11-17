@@ -171,7 +171,7 @@ namespace Personal_Manager
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            showPersonToolStripMenuItem_Click(sender, e);
         }
 
         private void refreshListOfPeopleToolStripMenuItem_Click(object sender, EventArgs e)
