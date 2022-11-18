@@ -200,6 +200,12 @@ namespace Personal_Manager
 
         private void button6_Click(object sender, EventArgs e)
         {
+            //prevents user from puuting spaces in the names wich will mess with the sorting algorithms.
+            if (textBox2.Text.Contains(" ") || textBox3.Text.Contains(" "))
+            {
+                MessageBox.Show("Please Do No Include Space In The Names");
+                return;
+            }
             //if nothing is selected from listBox1, don't do anything
             if (listBox1.SelectedItem != null)
             {
