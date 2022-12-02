@@ -66,6 +66,7 @@ namespace Personal_Manager
             Directory.CreateDirectory(@"C:\CanterlotApplications\PersonalManager\" + newFolderName + @"\files");
             var newFirst = File.Create(@"C:\CanterlotApplications\PersonalManager\" + newFolderName + @"\first.txt");
             newFirst.Close();
+            File.WriteAllText(@"C:\CanterlotApplications\PersonalManager\" + newFolderName + @"\first.txt", newFolderName);
             var newLast = File.Create(@"C:\CanterlotApplications\PersonalManager\" + newFolderName + @"\last.txt");
             newLast.Close();
             var newBio = File.Create(@"C:\CanterlotApplications\PersonalManager\" + newFolderName + @"\bio.txt");
@@ -171,7 +172,7 @@ namespace Personal_Manager
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            showPersonToolStripMenuItem_Click(sender, e);
         }
 
         private void refreshListOfPeopleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -199,6 +200,12 @@ namespace Personal_Manager
 
         private void button6_Click(object sender, EventArgs e)
         {
+            //prevents user from puuting spaces in the names wich will mess with the sorting algorithms.
+            if (textBox2.Text.Contains(" ") || textBox3.Text.Contains(" "))
+            {
+                MessageBox.Show("Please Do No Include Space In The Names");
+                return;
+            }
             //if nothing is selected from listBox1, don't do anything
             if (listBox1.SelectedItem != null)
             {
@@ -272,13 +279,24 @@ namespace Personal_Manager
             string[] dirs = Directory.GetDirectories(@"C:\CanterlotApplications\PersonalManager\");
             try
             {
+                List<string> AcceptedDIRs = new List<string>();//Accepted DIRs are the ones that have both first names and lastnames
+                List<string> FailedDIRs = new List<string>();
+                foreach (string dir in dirs)
+                {
+                    if (dir.Contains(" ")) AcceptedDIRs.Add(dir);
+                    else FailedDIRs.Add(dir);
+                }
                 //in last-name alphabetical ordering
-                foreach (string dir in dirs.OrderBy(p => p.Split(' ')[1]))
+                foreach (string dir in AcceptedDIRs.OrderBy(p => p.Split(' ')[1]))
+                {
+                    listBox1.Items.Add(Path.GetFileName(dir));
+                }
+                foreach(string dir in FailedDIRs)
                 {
                     listBox1.Items.Add(Path.GetFileName(dir));
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 //shows the error box
                 Form4 olah = new Form4();
