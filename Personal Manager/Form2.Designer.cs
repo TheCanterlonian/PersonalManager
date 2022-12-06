@@ -52,7 +52,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Copyright 2016";
+            this.label3.Text = "Copyright 2022";
             // 
             // label4
             // 
@@ -61,7 +61,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Canterlot Applications";
+            this.label4.Text = "Tiffany Darling";
             // 
             // label5
             // 
