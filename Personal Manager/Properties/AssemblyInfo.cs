@@ -9,9 +9,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Personal Manager")]
 [assembly: AssemblyDescription("A contact manager with file storage function.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Nikolas Powell")]
+[assembly: AssemblyCompany("Tiffany Darling")]
 [assembly: AssemblyProduct("Personal Manager")]
-[assembly: AssemblyCopyright("Copyright © Nikolas Powell 2016")]
+[assembly: AssemblyCopyright("Copyright © Tiffany Darling 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
