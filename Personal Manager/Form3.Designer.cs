@@ -53,7 +53,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(363, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "If you happen to find any bugs, please report them to Canterlot Applications.";
+            this.label1.Text = "If you happen to find any bugs, please report them to Tiffany Darling.";
             // 
             // label2
             // 
@@ -62,7 +62,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(158, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "We can be reached via email at";
+            this.label2.Text = "I can be reached via email at";
             // 
             // linkLabel1
             // 
@@ -72,7 +72,7 @@
             this.linkLabel1.Size = new System.Drawing.Size(162, 13);
             this.linkLabel1.TabIndex = 3;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "canterlotapplications@gmail.com";
+            this.linkLabel1.Text = "thecanterlonian@gmail.com";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Form3
