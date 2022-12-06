@@ -30,7 +30,7 @@ namespace Personal_Manager
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Process.Start("mailto:canterlotapplications@gmail.com");
+            Process.Start("mailto:thecanterlonian@gmail.com");
         }
     }
 }
