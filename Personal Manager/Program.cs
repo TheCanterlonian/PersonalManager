@@ -28,7 +28,7 @@ namespace Personal_Manager
             //begin the main form
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Main_Form());
         }
     }
 }

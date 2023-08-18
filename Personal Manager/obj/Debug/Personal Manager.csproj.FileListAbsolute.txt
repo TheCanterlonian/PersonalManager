@@ -21,3 +21,17 @@ C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Ma
 C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal_Manager.Properties.Resources.resources
 C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal Manager.csproj.GenerateResource.Cache
 C:\Users\Niko\Documents\Visual Studio 2015\Projects\Personal Manager\Personal Manager\obj\Debug\Personal_Manager.Form4.resources
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\bin\Debug\Personal Manager.exe.config
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\bin\Debug\Personal Manager.exe
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\bin\Debug\Personal Manager.pdb
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\obj\Debug\Personal Manager.csproj.AssemblyReference.cache
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\obj\Debug\Personal Manager.csproj.SuggestedBindingRedirects.cache
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\obj\Debug\Personal_Manager.Main_Form.resources
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\obj\Debug\Personal_Manager.About_Form.resources
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\obj\Debug\Personal_Manager.BugReport_Form.resources
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\obj\Debug\Personal_Manager.Error_Form.resources
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\obj\Debug\Personal_Manager.Properties.Resources.resources
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\obj\Debug\Personal Manager.csproj.GenerateResource.cache
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\obj\Debug\Personal Manager.csproj.CoreCompileInputs.cache
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\obj\Debug\Personal Manager.exe
+C:\Users\Emil\source\repos\PersonalManager\Personal Manager\obj\Debug\Personal Manager.pdb
