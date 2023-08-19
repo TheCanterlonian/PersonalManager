@@ -59,7 +59,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 13);
+            this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Tiffany Darling";
             // 
@@ -83,7 +83,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form2
+            // About_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -99,10 +99,10 @@
             this.MaximumSize = new System.Drawing.Size(227, 135);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(227, 135);
-            this.Name = "Form2";
+            this.Name = "About_Form";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "About";
+            this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
