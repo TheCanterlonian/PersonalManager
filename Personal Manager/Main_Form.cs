@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -28,6 +29,7 @@ namespace Personal_Manager
         {
             //populate the list of people
             refreshPeopleList(sender, e);
+
         }
         private void refreshPeopleList(object sender, EventArgs e)
         {
@@ -182,49 +184,50 @@ namespace Personal_Manager
             //prevents user from puuting spaces in the names wich will mess with the sorting algorithms.
             if (FirstName_TextBox.Text.Contains(" ") || LastName_TextBox.Text.Contains(" "))
             {
-                MessageBox.Show("Please Do No Include Space In The Names");
-                return;
+                FirstName_TextBox.Text.Replace(" ", "_");
+                LastName_TextBox.Text.Replace(" ", "_");
             }
+
             //if nothing is selected from listBox1, don't do anything
             if (Contacts_ListBox.SelectedItem == null) return;
-            
-                //find out what person is being edited
-                string selectedFolder = Contacts_ListBox.SelectedItem.ToString();
-                //write stuff in property boxes to files
-                StreamWriter swFirst = new StreamWriter(@"C:\CanterlotApplications\PersonalManager\" + selectedFolder + @"\first.txt");
-                swFirst.Write(FirstName_TextBox.Text);
-                swFirst.Close();
-                StreamWriter swLast = new StreamWriter(@"C:\CanterlotApplications\PersonalManager\" + selectedFolder + @"\last.txt");
-                swLast.Write(LastName_TextBox.Text);
-                swLast.Close();
-                StreamWriter swBio = new StreamWriter(@"C:\CanterlotApplications\PersonalManager\" + selectedFolder + @"\bio.txt");
-                swBio.Write(BioGraphy_RichTextBox.Text);
-                swBio.Close();
-                //remember to always close the streams
-                string firstNameToCombine = (FirstName_TextBox.Text);
-                string lastNameToCombine = (LastName_TextBox.Text);
-                string firstTrimed = firstNameToCombine.Trim();
-                string lastTrimed = lastNameToCombine.Trim();
-                firstTrimed = firstTrimed.Replace(" ", "_");
-                lastTrimed = lastTrimed.Replace(" ", "_");
-                //get rid of other spaces in names
-                string colapsedNames = firstTrimed + " " + lastTrimed;
-                //combine first and last name into a single variable using spaces as terminators
-                string sourceDirectory = @"C:\CanterlotApplications\PersonalManager\" + selectedFolder;
-                string destinationDirectory = @"C:\CanterlotApplications\PersonalManager\" + colapsedNames;
-                try
-                {
-                    Directory.Move(sourceDirectory, destinationDirectory);
-                }
-                catch (Exception)
-                {
-                    StreamWriter swException = new StreamWriter(@"C:\CanterlotApplications\PersonalManager\ErrorLog.txt", true);
-                    swException.WriteLine("Error: Standard input tried to give two people the same name. Tried renaming '" + sourceDirectory + "' to '" + destinationDirectory + "'. Item was '" + colapsedNames + "'.");
-                    swException.Close();
-                }
-                ShowAll_Button_Click(sender, e);
-                //refresh list of people after doing all of this
-            
+
+            //find out what person is being edited
+            string selectedFolder = Contacts_ListBox.SelectedItem.ToString();
+            //write stuff in property boxes to files
+            StreamWriter swFirst = new StreamWriter(@"C:\CanterlotApplications\PersonalManager\" + selectedFolder + @"\first.txt");
+            swFirst.Write(FirstName_TextBox.Text);
+            swFirst.Close();
+            StreamWriter swLast = new StreamWriter(@"C:\CanterlotApplications\PersonalManager\" + selectedFolder + @"\last.txt");
+            swLast.Write(LastName_TextBox.Text);
+            swLast.Close();
+            StreamWriter swBio = new StreamWriter(@"C:\CanterlotApplications\PersonalManager\" + selectedFolder + @"\bio.txt");
+            swBio.Write(BioGraphy_RichTextBox.Text);
+            swBio.Close();
+            //remember to always close the streams
+            string firstNameToCombine = (FirstName_TextBox.Text);
+            string lastNameToCombine = (LastName_TextBox.Text);
+            string firstTrimed = firstNameToCombine.Trim();
+            string lastTrimed = lastNameToCombine.Trim();
+            firstTrimed = firstTrimed.Replace(" ", "_");
+            lastTrimed = lastTrimed.Replace(" ", "_");
+            //get rid of other spaces in names
+            string colapsedNames = firstTrimed + " " + lastTrimed;
+            //combine first and last name into a single variable using spaces as terminators
+            string sourceDirectory = @"C:\CanterlotApplications\PersonalManager\" + selectedFolder;
+            string destinationDirectory = @"C:\CanterlotApplications\PersonalManager\" + colapsedNames;
+            try
+            {
+                Directory.Move(sourceDirectory, destinationDirectory);
+            }
+            catch (Exception)
+            {
+                StreamWriter swException = new StreamWriter(@"C:\CanterlotApplications\PersonalManager\ErrorLog.txt", true);
+                swException.WriteLine("Error: Standard input tried to give two people the same name. Tried renaming '" + sourceDirectory + "' to '" + destinationDirectory + "'. Item was '" + colapsedNames + "'.");
+                swException.Close();
+            }
+            ShowAll_Button_Click(sender, e);
+            //refresh list of people after doing all of this
+
         }
         private void savePersonToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -289,5 +292,35 @@ namespace Personal_Manager
             Close();
         }
 
+        private void ContactSearch_Button_Click(object sender, EventArgs e)
+        {
+            //resets/clear the contacts listbox
+            Contacts_ListBox.Items.Clear();
+
+            //gets all the contact directories
+            string[] Contacts = Directory.GetDirectories(@"C:\CanterlotApplications\PersonalManager\");
+            //gets the string user is searching for from textbox
+            string Inquiry = ContactSearch_TextBox.Text;
+            //goes through all the contacts and searches for matches
+            foreach(string Contact in Contacts)
+            {
+                if (Path.GetFileName(Contact).ToLower().Contains(Inquiry.ToLower()))
+                {
+                    Contacts_ListBox.Items.Add(Path.GetFileName(Contact));
+                }
+            }
+        }
+
+        private void ContactSearch_TextBox_TextChanged(object sender, EventArgs e)
+        {
+            //if contactSearch_Texbox is empty --> refresh contacts(show all contacts)
+            //else ------------------------------> call ContactSearch_Button_Click to search through contacts
+
+            if (ContactSearch_TextBox.Text == null) refreshPeopleList(sender, e);
+            else
+            {
+                ContactSearch_Button_Click(sender, e);
+            }
+        }
     }
 }

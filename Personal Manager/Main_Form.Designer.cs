@@ -142,6 +142,7 @@
             this.ContactSearch_Button.Size = new System.Drawing.Size(31, 20);
             this.ContactSearch_Button.TabIndex = 1;
             this.ContactSearch_Button.UseVisualStyleBackColor = true;
+            this.ContactSearch_Button.Click += new System.EventHandler(this.ContactSearch_Button_Click);
             // 
             // ContactSearch_TextBox
             // 
@@ -149,6 +150,7 @@
             this.ContactSearch_TextBox.Name = "ContactSearch_TextBox";
             this.ContactSearch_TextBox.Size = new System.Drawing.Size(128, 20);
             this.ContactSearch_TextBox.TabIndex = 1;
+            this.ContactSearch_TextBox.TextChanged += new System.EventHandler(this.ContactSearch_TextBox_TextChanged);
             // 
             // ShowAll_Button
             // 
